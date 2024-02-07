@@ -17,6 +17,8 @@ import { GalleriaModule } from 'primeng/galleria';
 import { ImageModule } from 'primeng/image';
 import { CardModule } from 'primeng/card';
 
+import { ProgressSpinnerModule } from 'primeng/progressspinner';
+
 const primaNgModules = [FormsModule,
   DataViewModule,
   PickListModule,
@@ -28,7 +30,7 @@ const primaNgModules = [FormsModule,
   ReactiveFormsModule,
   ToastModule, AutoCompleteModule, CalendarModule, PasswordModule, ImageModule,
   GalleriaModule,
-  CarouselModule, CardModule];
+  CarouselModule, CardModule, ProgressSpinnerModule];
 
 @NgModule({
   imports: [

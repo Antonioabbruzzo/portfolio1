@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { IBrewery } from '../model/brewery.model';
 import { ApiServiceService } from '../services/api-service.service';
 import { BreweryService } from '../services/brewery.service';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-single-brewery',
@@ -32,7 +32,7 @@ export class SingleBreweryComponent {
   show: boolean = false;
   idBrewery: string = '';
 
-  constructor(private apiService: ApiServiceService, private breweryService: BreweryService, private route: ActivatedRoute) {
+  constructor(private apiService: ApiServiceService, private breweryService: BreweryService, private route: ActivatedRoute, private router: Router) {
     this.route.params.subscribe((params) => {
       this.idBrewery = params['id'];
     });
@@ -42,7 +42,9 @@ export class SingleBreweryComponent {
     this.getSingleBrewey();
   }
 
-
+  comeBack() {
+    this.router.navigate(['brewery']);
+  }
 
   getSingleBrewey() {
     setTimeout(() => {
