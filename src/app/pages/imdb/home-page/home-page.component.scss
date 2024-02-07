@@ -1,0 +1,49 @@
+#ciao{
+  width: 300px;
+  height: 500px;
+  img{
+    object-fit: scale-down;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+
+
+
+
+#centrale{
+  position: relative;
+  left: 700px;
+}
+
+#prova{
+  width:80%;
+  height: 90%;
+}
+
+.topImbd{
+ 
+ 
+  background-color:#F2E7C9;
+  background-size: contain;
+
+}
+
+.posizione{
+  position: relative;
+  bottom: 50px;
+}
+
+#titolo{
+  color:#BFD7B5;
+  font-size: 80px;
+  position: relative;
+  top: 30px;
+  -webkit-text-stroke-width: 3px;
+  -webkit-text-stroke-color: black;
+}
+
+#bordo{
+  border: 3px solid rgb(214, 214, 9);
+}
