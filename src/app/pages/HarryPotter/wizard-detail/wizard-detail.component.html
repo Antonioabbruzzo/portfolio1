@@ -1,0 +1,16 @@
+<div class="flex justify-content-center ">
+
+  <p-card [header]="wizards.firstName" [subheader]="wizards.lastName" [style]="{ width: '360px' }" class="fadeinright animation-duration-1000  flex align-items-center justify-content-center
+  font-bold  m-2 px-5 py-3">
+    <ng-template pTemplate="header">
+      <img alt="Card" src="../../../../assets/layout/harryPotter/albus.gif" />
+    </ng-template>
+    <label class="font-bold">Potions</label>
+    <p *ngFor="let item of wizards.elixirs">
+      {{item.name}}
+    </p>
+    <ng-template pTemplate="footer">
+      <p-button label="Back to list" icon="pi pi-home" (click)="goToHome()"></p-button>
+    </ng-template>
+  </p-card>
+</div>

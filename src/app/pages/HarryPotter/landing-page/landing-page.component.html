@@ -1,0 +1,12 @@
+<div>
+  <div class="absolute left-50" *ngIf="show===false">
+    <img src="'../../../../../../assets/layout/harryPotter/magic-harry-potter.gif" alt="">
+  </div>
+  <div class="absolute left-50" *ngIf="show===true">
+    <img src="'../../../../../../assets/layout/harryPotter/click.gif" alt="">
+  </div>
+
+  <button pButton pRipple type="button" label="ENTER THE WORLD OF HARRY POTTER" class="bottne"
+    (click)="goTo()"></button>
+
+</div>
