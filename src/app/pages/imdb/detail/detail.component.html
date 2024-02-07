@@ -20,8 +20,11 @@
     </g>
   </svg>
 </div>
+<p-progressSpinner *ngIf="showDetail===false" class="flex justify-content-center my-8"></p-progressSpinner>
 <div *ngIf="showDetail===true">
-  <div *ngFor="let item of details" class=" flex justify-content-center">
+
+  <div *ngFor="let item of details" class="fadeindown animation-duration-1000  flex align-items-center justify-content-center
+  font-bold m-2 px-5 py-3 ">
     <div
       class="border-1 surface-border border-round m-2 text-center py-5 px-3 shadow-2 w-5 flex justify-content-center">
       <div class="w-full flex justify-content-center">
@@ -45,7 +48,8 @@
       </div>
     </div>
   </div>
-
-
 </div>
+
+
+
 <router-outlet></router-outlet>
