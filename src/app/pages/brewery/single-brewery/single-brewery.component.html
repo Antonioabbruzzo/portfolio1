@@ -1,0 +1,20 @@
+<div class="grid grid-nogutter">
+  <div class="col-12 md:col-4">
+    <div class="card m-3 border-1 surface-border shadow-1 ">
+      <div class="flex flex-wrap gap-2 align-items-center justify-content-between mb-2">
+        <div class="flex align-items-center">
+          <i class="pi pi-tag mr-2"></i>
+          <span class="font-semibold">{{singleBrewey.country}}</span>
+        </div>
+      </div>
+      <div class="flex flex-column align-items-center text-center mb-3">
+        <img [src]="'../../../../assets/layout/birrerie/birreria.jpg'" class="w-9 shadow-2 my-3 mx-0" id="immagine" />
+        <div class="text-2xl font-bold">{{singleBrewey.name}}</div>
+        <div class="mb-3">{{singleBrewey.city}}</div>
+      </div>
+      <div class="flex align-items-center justify-content-center transition-transform transition-duration-500">
+        <button pButton pRipple type="button" label="Details"></button>
+      </div>
+    </div>
+  </div>
+</div>
