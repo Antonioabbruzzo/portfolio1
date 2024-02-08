@@ -22,6 +22,7 @@ import { TableModule } from 'primeng/table';
 import { DialogModule } from 'primeng/dialog';
 import { ConfirmationService, MessageService } from 'primeng/api';
 import { DialogService } from 'primeng/dynamicdialog';
+import { ProgressBarModule } from 'primeng/progressbar';
 
 const SERVICES = [ConfirmationService, MessageService, DialogService];
 const primaNgModules = [FormsModule,
@@ -35,7 +36,7 @@ const primaNgModules = [FormsModule,
   ReactiveFormsModule,
   ToastModule, AutoCompleteModule, CalendarModule, PasswordModule, ImageModule,
   GalleriaModule,
-  CarouselModule, CardModule, ProgressSpinnerModule, TableModule, DialogModule,];
+  CarouselModule, CardModule, ProgressSpinnerModule, TableModule, DialogModule, ProgressBarModule];
 
 @NgModule({
   imports: [

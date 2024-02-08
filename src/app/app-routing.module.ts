@@ -1,6 +1,6 @@
 import { RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
-import { NotfoundComponent } from './demo/components/notfound/notfound.component';
+
 import { AppLayoutComponent } from "./layout/app.layout.component";
 
 @NgModule({
@@ -18,7 +18,9 @@ import { AppLayoutComponent } from "./layout/app.layout.component";
                     { path: 'imdb', loadChildren: () => import('../app/pages/imdb/imdb.module').then(m => m.ImdbModule) },
                     { path: 'brewery', loadChildren: () => import('../app/pages/brewery/brewery.module').then(m => m.BreweryModule) },
                     { path: 'harrypotter', loadChildren: () => import('../app/pages/HarryPotter/harry-potter.module').then(m => m.HarryPotterModule) },
-                    { path: 'anime', loadChildren: () => import('../app/pages/Anime/anime.module').then(m => m.AnimeModule) }
+                    { path: 'anime', loadChildren: () => import('../app/pages/Anime/anime.module').then(m => m.AnimeModule) },
+                    { path: 'libreria', loadChildren: () => import('../app/pages/libreria/libreria.module').then(m => m.LibreriaModule) },
+                    { path: 'game', loadChildren: () => import('../app/pages/game/game.module').then(m => m.GameModule) }
                 ]
             },
 
