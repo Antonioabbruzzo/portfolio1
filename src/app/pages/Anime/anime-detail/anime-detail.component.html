@@ -1,0 +1,63 @@
+<div class="m-5">
+  <div class="mb-2">
+    <button (click)="backHome()" pButton pRipple type="button" label="Home"></button>
+  </div>
+  <div class="flex  justify-content-center align-content-center">
+    <h1>{{ anime.title }}</h1>
+  </div>
+  <div class=" flex justify-content-center align-content-center">
+    <h5>{{ anime.title_japanese }}</h5>
+  </div>
+  <div class="flex justify-content-center align-content-center">
+
+    <img [src]="anime.images.jpg.large_image_url" alt="" class="card " />
+  </div>
+
+  <div class="card my-4">
+    <h3>Background</h3>
+    <p>{{ anime.background }}</p>
+  </div>
+
+  <div class="card">
+    <h3>Synopsis</h3>
+    <p>{{ anime.synopsis }}</p>
+  </div>
+
+
+
+  <div class="card">
+    <p-table [value]="episodes" [tableStyle]="{ 'min-width': '50rem' }">
+      <ng-template pTemplate="header">
+        <tr>
+          <th>Title</th>
+          <th>Japanese</th>
+          <th>Score</th>
+          <th>Discussion forum</th>
+        </tr>
+      </ng-template>
+      <ng-template pTemplate="body" let-anime>
+        <tr>
+
+          <td>
+            <p class="nome" (click)="show(anime.id, episodes.id)">{{ anime.title }}</p>
+          </td>
+          <td>
+            <p class="nome" (click)="goToDetailEpisode(anime.id)">{{ anime.title_japanese }}</p>
+          </td>
+          <td>
+            <p>
+              {{anime.score}}
+            </p>
+          </td>
+          <td>
+            <a>
+              {{anime.forum_url}}
+            </a>
+          </td>
+
+        </tr>
+      </ng-template>
+    </p-table>
+
+  </div>
+</div>

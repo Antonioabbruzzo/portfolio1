@@ -25,7 +25,8 @@ export class AppMenuComponent implements OnInit {
                 items: [
                     { label: 'IMDb', icon: 'pi pi-fw pi-home', routerLink: ['imdb'] },
                     { label: 'Brewery', icon: 'pi pi-fw pi-home', routerLink: ['brewery'] },
-                    { label: 'Harry Potter', icon: 'pi pi-fw pi-home', routerLink: ['harrypotter'] }
+                    { label: 'Harry Potter', icon: 'pi pi-fw pi-home', routerLink: ['harrypotter'] },
+                    { label: 'Anime', icon: 'pi pi-fw pi-home', routerLink: ['anime'] }
                 ]
             },
             {

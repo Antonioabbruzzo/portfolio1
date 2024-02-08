@@ -12,7 +12,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./home-page.component.scss']
 })
 export class HomePageComponent implements OnInit {
-
+  show: boolean = false;
   id: string = '';
   showCard: boolean = false;
   loading: boolean = false;
@@ -51,6 +51,7 @@ export class HomePageComponent implements OnInit {
     this.apiService.getRicerca(nome).subscribe({
       next: (value: any) => {
         this.responseFromApi = value;
+
       }
     });
 
@@ -63,7 +64,7 @@ export class HomePageComponent implements OnInit {
 
       }
     }, 1000);
-    this.showCard = !this.showCard;
+
   }
 
 

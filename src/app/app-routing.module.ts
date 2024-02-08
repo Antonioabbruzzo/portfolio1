@@ -17,7 +17,8 @@ import { AppLayoutComponent } from "./layout/app.layout.component";
                     { path: 'pages', loadChildren: () => import('./demo/components/pages/pages.module').then(m => m.PagesModule) },
                     { path: 'imdb', loadChildren: () => import('../app/pages/imdb/imdb.module').then(m => m.ImdbModule) },
                     { path: 'brewery', loadChildren: () => import('../app/pages/brewery/brewery.module').then(m => m.BreweryModule) },
-                    { path: 'harrypotter', loadChildren: () => import('../app/pages/HarryPotter/harry-potter.module').then(m => m.HarryPotterModule) }
+                    { path: 'harrypotter', loadChildren: () => import('../app/pages/HarryPotter/harry-potter.module').then(m => m.HarryPotterModule) },
+                    { path: 'anime', loadChildren: () => import('../app/pages/Anime/anime.module').then(m => m.AnimeModule) }
                 ]
             },
 

@@ -1,0 +1,39 @@
+<p-progressSpinner *ngIf="show===false" class="flex justify-content-center my-8"
+  style="width: 70px;"></p-progressSpinner>
+
+<div class="m-5" *ngIf="show===true">
+
+  <h1>{{ episode.title }}</h1>
+  <small>{{ episode.title_japanese }}</small>
+  <small>{{ episode.title_romanji }}</small>
+
+  <p style="width: 700px;">{{ episode.synopsis }}</p>
+  <p-table [value]="[{}]" [tableStyle]="{ 'min-width': '50rem' }">
+    <ng-template pTemplate="header">
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Title</th>
+        <th scope="col">Title Japanese</th>
+        <th scope="col">Title Romanji</th>
+        <th scope="col">Filler</th>
+        <th scope="col">Recap</th>
+        <th scope="col">Aired</th>
+        <th scope="col">Duration</th>
+        <th scope="col">Link</th>
+      </tr>
+    </ng-template>
+    <ng-template pTemplate="body">
+      <tr>
+        <th scope="row">{{ episode.id }}</th>
+        <td>{{ episode.title }}</td>
+        <td>{{ episode.title_japanese }}</td>
+        <td>{{ episode.title_romanji }}</td>
+        <td>{{ episode.filler }}</td>
+        <td>{{ episode.recap }}</td>
+        <td>{{ episode.aired | date }}</td>
+        <td>{{ episode.duration / 60 }}</td>
+        <td><a [href]="episode.url">Link Episodio</a></td>
+      </tr>
+    </ng-template>
+  </p-table>
+</div>
