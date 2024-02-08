@@ -31,15 +31,10 @@
 <div>
 
 
-  <div class="w-full h-full m-auto ">
-
-    <p-progressBar mode="indeterminate" [style]="{ height: '6px' }" *ngIf="show"></p-progressBar>
-  </div>
-
 
 
   <p-carousel [value]="films" [numVisible]="5" [numScroll]="1" [circular]="true" autoplayInterval="3000"
-    [responsiveOptions]="carouselResponsiveOptions" *ngIf="!show">
+    [responsiveOptions]="carouselResponsiveOptions" *ngIf="show">
     <ng-template let-item pTemplate="item">
 
       <div class="border-1 surface-border border-round m-2 text-center py-5 px-3 shadow-1 ">
@@ -58,4 +53,9 @@
       </div>
     </ng-template>
   </p-carousel>
+</div>
+
+<div class="bar">
+
+  <p-progressBar mode="indeterminate" [style]="{ height: '6px'}" *ngIf="!show" class="w-full"></p-progressBar>
 </div>
