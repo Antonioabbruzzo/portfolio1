@@ -1,0 +1,18 @@
+<h1>WELCOME IN THIS LOW-COST SCHOOL</h1>
+
+<div>
+  <ul class="list-group">
+    <li
+      class="list-group-item list-group-item-action"
+      *ngFor="let book of books"
+      (click)="goToLibrary()"
+    >
+      <h2>{{ book.title }}</h2>
+      <p>{{ book.author }}</p>
+      <p>{{ book.publicationYear }}</p>
+      <p>{{ book.synopsis }}</p>
+    </li>
+  </ul>
+</div>
+
+<button class="btn btn-light" (click)="goToLibrary()">Go to table edit</button>

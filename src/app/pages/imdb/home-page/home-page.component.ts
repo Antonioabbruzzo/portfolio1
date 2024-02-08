@@ -61,7 +61,7 @@ export class HomePageComponent implements OnInit {
         this.films = this.responseFromApi.description;
         this.onFilter(); // Chiamata automatica alla funzione di filtro al termine della ricerca API
         console.log(this.films, '**film filtrati per nome, contenuti in films');
-
+        this.show = !this.show;
       }
     }, 1000);
 

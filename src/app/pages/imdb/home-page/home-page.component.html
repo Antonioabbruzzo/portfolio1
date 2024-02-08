@@ -28,25 +28,34 @@
 
 </div>
 
+<div>
 
 
-<p-carousel [value]="films" [numVisible]="5" [numScroll]="1" [circular]="true" autoplayInterval="3000"
-  [responsiveOptions]="carouselResponsiveOptions">
-  <ng-template let-item pTemplate="item">
+  <div class="w-full h-full m-auto ">
 
-    <div class="border-1 surface-border border-round m-2 text-center py-5 px-3 shadow-1 ">
-      <div class="w-full flex justify-content-center">
-        <div class="mb-3" id="ciao">
-          <img [src]="item['#IMG_POSTER']" alt="{{ item['#TITLE'] }}" />
+    <p-progressBar mode="indeterminate" [style]="{ height: '6px' }" *ngIf="show"></p-progressBar>
+  </div>
+
+
+
+  <p-carousel [value]="films" [numVisible]="5" [numScroll]="1" [circular]="true" autoplayInterval="3000"
+    [responsiveOptions]="carouselResponsiveOptions" *ngIf="!show">
+    <ng-template let-item pTemplate="item">
+
+      <div class="border-1 surface-border border-round m-2 text-center py-5 px-3 shadow-1 ">
+        <div class="w-full flex justify-content-center">
+          <div class="mb-3" id="ciao">
+            <img [src]="item['#IMG_POSTER']" alt="{{ item['#TITLE'] }}" />
+          </div>
+        </div>
+        <div>
+          <h4 class="mb-1 p-text-bold">{{ item['#TITLE'] }}</h4>
+          <h6 class="mb-1 p-text-bold">{{ item['#YEAR'] }}</h6>
+          <div class="mt-5 flex align-items-center justify-content-center gap-2">
+            <p-button icon="pi pi-search" [rounded]="true" (click)="goTo(item['#IMDB_ID'])"></p-button>
+          </div>
         </div>
       </div>
-      <div>
-        <h4 class="mb-1 p-text-bold">{{ item['#TITLE'] }}</h4>
-        <h6 class="mb-1 p-text-bold">{{ item['#YEAR'] }}</h6>
-        <div class="mt-5 flex align-items-center justify-content-center gap-2">
-          <p-button icon="pi pi-search" [rounded]="true" (click)="goTo(item['#IMDB_ID'])"></p-button>
-        </div>
-      </div>
-    </div>
-  </ng-template>
-</p-carousel>
+    </ng-template>
+  </p-carousel>
+</div>

@@ -1,0 +1,90 @@
+<h1>LIBRARY</h1>
+
+<button class="btn btn-light">
+  Crea nuovo libro
+</button>
+
+<ng-template #newBookModal let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title">Crea nuovo libro</h4>
+  </div>
+  <div class="modal-body">
+    <form [formGroup]="newBookForm">
+      <div class="form-group">
+        <label for="title">Titolo</label>
+        <input type="text" id="title" class="form-control" formControlName="title" />
+      </div>
+      <div class="form-group">
+        <label for="author">Autore</label>
+        <input type="text" id="author" class="form-control" formControlName="author" />
+      </div>
+      <div class="form-group">
+        <label for="publicationYear">Anno di pubblicazione</label>
+        <input type="number" id="publicationYear" class="form-control" formControlName="publicationYear" />
+      </div>
+      <div class="form-group">
+        <label for="synopsis">Sinossi</label>
+        <textarea id="synopsis" class="form-control" formControlName="synopsis"></textarea>
+      </div>
+    </form>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-outline-dark" (click)="modal.close('Close click')">
+      Annulla
+    </button>
+    <button type="button" class="btn btn-dark" (click)="createBook()">
+      Crea
+    </button>
+  </div>
+</ng-template>
+
+<div>
+  <ul class="list-group">
+    <li *ngFor="let book of books; let i = index" class="list-group-item list-group-item-action">
+      <h2>{{ book.title }}</h2>
+      <p>{{ book.author }}</p>
+      <p>{{ book.publicationYear }}</p>
+      <p>{{ book.synopsis }}</p>
+      <button (click)="removeBook(i)" class="btn btn-light">Rimuovi</button>
+      <button (click)="openEditModal(editModal, i)" class="btn btn-light">
+        Modifica
+      </button>
+    </li>
+  </ul>
+</div>
+
+<ng-template #editModal let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title">Modifica libro</h4>
+  </div>
+  <div class="modal-body">
+    <form [formGroup]="bookForm">
+      <div class="form-group">
+        <label for="title">Titolo</label>
+        <input type="text" id="title" class="form-control" formControlName="title" />
+      </div>
+      <div class="form-group">
+        <label for="author">Autore</label>
+        <input type="text" id="author" class="form-control" formControlName="author" />
+      </div>
+      <div class="form-group">
+        <label for="publicationYear">Anno di pubblicazione</label>
+        <input type="number" id="publicationYear" class="form-control" formControlName="publicationYear" />
+      </div>
+      <div class="form-group">
+        <label for="synopsis">Sinossi</label>
+        <textarea id="synopsis" class="form-control" formControlName="synopsis"></textarea>
+      </div>
+    </form>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-outline-dark" (click)="modal.close('Close click')">
+      Annulla
+    </button>
+    <button type="button" class="btn btn-dark" (click)="saveBook()">
+      Salva
+    </button>
+  </div>
+</ng-template>
+
+<button class="btn btn-light" (click)="backToHome()">Back to School</button>
