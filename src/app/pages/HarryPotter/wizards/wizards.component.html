@@ -29,7 +29,7 @@
                 <td>
                   <span *ngFor="let elixir of wizards.elixirs">
                     <li>
-                      <p (click)="showDialog()" (click)="getPotion(elixir.id)" icon="pi pi-external-link">
+                      <p class="nome" (click)="showDialog()" (click)="getPotion(elixir.id)" icon="pi pi-external-link">
                         {{elixir.name}}</p>
                     </li>
                   </span>
