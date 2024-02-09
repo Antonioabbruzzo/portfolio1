@@ -37,7 +37,7 @@
     [responsiveOptions]="carouselResponsiveOptions" *ngIf="show">
     <ng-template let-item pTemplate="item">
 
-      <div class="border-1 surface-border border-round m-2 text-center py-5 px-3 shadow-1 ">
+      <div class="border-1 surface-border border-round m-2 text-center py-5 px-3 shadow-1 " id="films">
         <div class="w-full flex justify-content-center">
           <div class="mb-3" id="ciao">
             <img [src]="item['#IMG_POSTER']" alt="{{ item['#TITLE'] }}" />

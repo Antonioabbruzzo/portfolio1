@@ -1,24 +1,59 @@
+/* Stile del container del gioco */
 .game-container {
-  
-  grid-template-columns: repeat(3, 100px);
-  grid-gap: 5px;
+  display: grid;
+  grid-template-columns: repeat(4, 60px); /* Aumenta il numero di colonne e la larghezza delle celle */
+  grid-gap: 93px; /* Aumenta la spaziatura tra le celle */
+  background-color: #f0f0f0; /* Colore di sfondo del gioco */
+  padding: 20px;
+  border-radius: 10px;
+  justify-content: center;
+  align-items: center;
 }
 
-.row {
-  display: flex;
-}
-
+/* Stile delle celle del gioco */
 .cell {
+  width: 155px; /* Aumenta la larghezza della cella */
+  height: 155px; /* Aumenta l'altezza della cella */
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 100px;
-  height: 100px;
-  border: 1px solid #ccc;
+  font-size: 18px;
+  font-weight: bold;
+  border: 2px solid #ccc; /* Bordo della cella */
   cursor: pointer;
-  font-size: 24px;
+  transition: background-color 0.3s ease-in-out;
 }
 
 .cell:hover {
-  background-color: #eee;
+  background-color: #e0e0e0;
+  border: 1px solid black; /* Cambia colore al passaggio del mouse */
 }
+
+/* Stile del messaggio di vittoria/pareggio */
+.winner {
+  margin-top: 100px;
+  width: 300px;
+}
+
+h2 {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  text-align: center;
+  margin: 0;
+}
+
+.win{
+  font-size: 30px;
+  color: green;
+}
+.lose{
+  font-size: 30px;
+  color: rgb(195, 0, 0);
+}
+.draw{
+  font-size: 30px;
+  color: rgb(0, 0, 0);
+}
+
+/* Stili per i messaggi specifici di vincita/pareggio */

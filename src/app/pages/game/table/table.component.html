@@ -1,12 +1,15 @@
-<div class="game-container">
-  <div class="row" *ngFor="let row of table; let i = index">
-    <div class="cell" *ngFor="let cell of row; let j = index" (click)="makeMove(i, j)">
-      {{ cell }}
+<div class="">
+  <h1 class="text-center">Prenditi una pausa</h1>
+  <div class="game-container">
+    <div class="row" *ngFor="let row of table; let i = index">
+      <div class="cell" *ngFor="let cell of row; let j = index" (click)="makeMove(i, j)">
+        {{ cell }}
+      </div>
     </div>
-  </div>
-  <div *ngIf="winner">
-    <h2 *ngIf="winner === 'X'"> Hai VINTO!</h2>
-    <h2 *ngIf="winner === 'O'"> Hai PERSO!</h2>
-    <h2 *ngIf="winner === 'Draw'">Il gioco è un pareggio!</h2>
+    <div *ngIf="winner" class="winner">
+      <h2 *ngIf="winner === 'X'" class="win"> Hai VINTO! :)</h2>
+      <h2 *ngIf="winner === 'O'" class="lose"> Hai PERSO! :(</h2>
+      <h2 *ngIf="winner === 'Draw'" class="draw">Il gioco è un PAREGGIO! :|</h2>
+    </div>
   </div>
 </div>

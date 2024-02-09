@@ -17,7 +17,7 @@
           <div *ngIf="home===false" class="divImg">
             <img src="'../../../../../../assets/layout/anime/giphy.gif" alt="" class="img">
           </div>
-          <div>
+          <div class="shadow-1">
 
             <p-table [value]="animeList" [tableStyle]="{ 'min-width': '50rem' }" *ngIf="home===true">
               <ng-template pTemplate="header">
@@ -29,7 +29,7 @@
                 </tr>
               </ng-template>
               <ng-template pTemplate="body" let-anime>
-                <tr>
+                <tr id="anime">
                   <td><img [src]="anime.images.jpg.large_image_url" alt="" style="height: 100px;"></td>
                   <td>
                     <p class="nome" (click)="animeDetail(anime.id)">{{ anime.title }}</p>
