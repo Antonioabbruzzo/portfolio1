@@ -15,6 +15,12 @@ export class HomeComponent implements OnInit, OnDestroy {
   books: IBook[] = [];
 
   constructor(private router: Router, private bookService: BookService) { }
+  maxLenght: number = 40;
+  delet: boolean = true;
+
+  showDescription(book: IBook) {
+
+  }
 
   ngOnInit(): void {
     this.bookService.books$
@@ -28,6 +34,6 @@ export class HomeComponent implements OnInit, OnDestroy {
   }
 
   goToLibrary() {
-    this.router.navigate(['/library']);
+    this.router.navigate(['libreria/library']);
   }
 }

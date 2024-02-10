@@ -17,7 +17,8 @@ export class LibraryComponent implements OnInit, OnDestroy {
   bookForm: FormGroup;
   newBookForm: FormGroup;
   editingBookIndex: number | null = null;
-
+  visible: boolean = false;
+  visibleEdit: boolean = false;
   constructor(private bookService: BookService, private fb: FormBuilder, private router: Router) {
     this.bookForm = this.fb.group({
       title: [''],
@@ -48,7 +49,11 @@ export class LibraryComponent implements OnInit, OnDestroy {
     this.bookService.removeBook(index);
   }
 
-
+  openEditModal(index: number): void {
+    this.editingBookIndex = index;
+    this.bookForm.setValue(this.books[index]);
+    this.visibleEdit = !this.visibleEdit;
+  }
 
   saveBook(): void {
     if (this.editingBookIndex !== null) {
@@ -56,11 +61,18 @@ export class LibraryComponent implements OnInit, OnDestroy {
         this.bookForm.value.title,
         this.bookForm.value.author,
         this.bookForm.value.publicationYear,
-        this.bookForm.value.synopsis
+        this.bookForm.value.synopsis,
+
       ));
 
     }
   }
+  showDialog() {
+    console.log('ciao');
+
+    this.visible = true;
+  }
+
 
 
   createBook(): void {
@@ -68,7 +80,8 @@ export class LibraryComponent implements OnInit, OnDestroy {
       this.newBookForm.value.title,
       this.newBookForm.value.author,
       this.newBookForm.value.publicationYear,
-      this.newBookForm.value.synopsis
+      this.newBookForm.value.synopsis,
+
     ));
 
   }

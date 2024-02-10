@@ -6,10 +6,13 @@
         {{ cell }}
       </div>
     </div>
-    <div *ngIf="winner" class="winner">
-      <h2 *ngIf="winner === 'X'" class="win"> Hai VINTO! :)</h2>
-      <h2 *ngIf="winner === 'O'" class="lose"> Hai PERSO! :(</h2>
-      <h2 *ngIf="winner === 'Draw'" class="draw">Il gioco è un PAREGGIO! :|</h2>
+    <div *ngIf="winner" class="winner ">
+      <div>
+        <h2 *ngIf="winner === 'X'" class="win"> Hai VINTO! :)</h2>
+        <h2 *ngIf="winner === 'O'" class="lose"> Hai PERSO! :(</h2>
+        <h2 *ngIf="winner === 'Draw'" class="draw">Il gioco è un PAREGGIO! :|</h2>
+      </div>
+      <button pButton pRipple type="button" label="Restar Game" class="bottone" (click)="restartGame()"></button>
     </div>
   </div>
 </div>

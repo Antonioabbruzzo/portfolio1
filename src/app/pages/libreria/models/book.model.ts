@@ -3,6 +3,8 @@ export interface IBook {
   author: string;
   publicationYear: number;
   synopsis: string;
+
+
 }
 
 export class BookModel implements IBook {
@@ -10,6 +12,9 @@ export class BookModel implements IBook {
     public title: string,
     public author: string,
     public publicationYear: number,
-    public synopsis: string
+    public synopsis: string,
+
   ) { }
+
+
 }

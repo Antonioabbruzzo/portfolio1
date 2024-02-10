@@ -1,18 +1,27 @@
+<!-- app-book-list.component.html -->
 <h1>WELCOME IN THIS LOW-COST SCHOOL</h1>
 
-<div>
-  <ul class="list-group">
-    <li
-      class="list-group-item list-group-item-action"
-      *ngFor="let book of books"
-      (click)="goToLibrary()"
-    >
-      <h2>{{ book.title }}</h2>
-      <p>{{ book.author }}</p>
-      <p>{{ book.publicationYear }}</p>
-      <p>{{ book.synopsis }}</p>
-    </li>
-  </ul>
-</div>
+<button (click)="goToLibrary()"></button>
+<div class="flex flex-wrap gap-3">
+  <div *ngFor="let book of books; let i=index" class="p-col-12 p-md-4">
+    <div>
+      <p-card>
+        <div class="text-center">
+          <h3 class="font-bold">
+            {{ book.title }}
+          </h3>
+        </div>
 
-<button class="btn btn-light" (click)="goToLibrary()">Go to table edit</button>
+        <p class="text-center">
+          {{ book.author }}
+        </p>
+        <div>
+          <p class="bold text-center">{{ 'Year of Publication: ' + book.publicationYear }}</p>
+        </div>
+        <div (click)="showDescription(i)">
+          <p>{{ 'Synopsis: ' + book.synopsis }}</p>
+        </div>
+      </p-card>
+    </div>
+  </div>
+</div>

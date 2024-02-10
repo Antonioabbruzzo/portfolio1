@@ -6,14 +6,21 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './table.component.html',
   styleUrl: './table.component.scss'
 })
-export class TableComponent implements OnInit {
-  ngOnInit(): void {
-    // this.makeRandomMove();
-  }
+export class TableComponent {
+
   currentPlayer: 'X' | 'O' = 'X';
   table: string[][] = [['', '', ''], ['', '', ''], ['', '', '']];
   winner: string | null = null;
 
+  restartGame(): void {
+    this.table = [
+      [null, null, null],
+      [null, null, null],
+      [null, null, null]
+    ];
+    this.winner = null;
+    this.currentPlayer = 'X';
+  }
 
 
   makeMove(row: number, col: number): void {
@@ -27,7 +34,7 @@ export class TableComponent implements OnInit {
         this.currentPlayer = this.currentPlayer === 'X' ? 'O' : 'X';
       }
     }
-    console.log('passo qui');
+
     this.makeRandomMove();
   }
 
