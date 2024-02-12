@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-landing',
@@ -7,5 +7,5 @@ import { Component, OnInit } from '@angular/core';
 
 })
 export class LandingComponent {
-  products: any[] = [1, 2, 3, 4, 5, 6, 7, 7];
+
 }
