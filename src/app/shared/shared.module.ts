@@ -16,7 +16,6 @@ import { CarouselModule } from 'primeng/carousel';
 import { GalleriaModule } from 'primeng/galleria';
 import { ImageModule } from 'primeng/image';
 import { CardModule } from 'primeng/card';
-
 import { ProgressSpinnerModule } from 'primeng/progressspinner';
 import { TableModule } from 'primeng/table';
 import { DialogModule } from 'primeng/dialog';
@@ -29,7 +28,7 @@ import { ToggleButtonModule } from 'primeng/togglebutton';
 import { AnimateOnScrollModule } from 'primeng/animateonscroll';
 
 const SERVICES = [ConfirmationService, MessageService, DialogService];
-const primaNgModules = [FormsModule,
+const primeNgModule = [FormsModule,
   DataViewModule,
   PickListModule,
   OrderListModule,
@@ -46,12 +45,12 @@ const primaNgModules = [FormsModule,
 
 @NgModule({
   imports: [
-    CommonModule, ...primaNgModules
+    CommonModule, ...primeNgModule
 
   ],
   providers: [...SERVICES],
   declarations: [],
-  exports: [...primaNgModules]
+  exports: [...primeNgModule]
 
 })
 export class SharedModule { }
