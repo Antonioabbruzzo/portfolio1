@@ -36,13 +36,13 @@
         </tr>
       </ng-template>
       <ng-template pTemplate="body" let-anime>
-        <tr>
+        <tr (click)="show(anime.id, episodes.id)">
 
           <td>
-            <p class="nome" (click)="show(anime.id, episodes.id)">{{ anime.title }}</p>
+            <p class="nome">{{ anime.title }}</p>
           </td>
           <td>
-            <p class="nome" (click)="goToDetailEpisode(anime.id)">{{ anime.title_japanese }}</p>
+            <p class="nome">{{ anime.title_japanese }}</p>
           </td>
           <td>
             <p>

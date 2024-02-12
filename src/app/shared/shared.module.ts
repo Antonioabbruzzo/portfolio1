@@ -23,6 +23,10 @@ import { DialogModule } from 'primeng/dialog';
 import { ConfirmationService, MessageService } from 'primeng/api';
 import { DialogService } from 'primeng/dynamicdialog';
 import { ProgressBarModule } from 'primeng/progressbar';
+import { RippleModule } from 'primeng/ripple';
+import { SplitButtonModule } from 'primeng/splitbutton';
+import { ToggleButtonModule } from 'primeng/togglebutton';
+import { AnimateOnScrollModule } from 'primeng/animateonscroll';
 
 const SERVICES = [ConfirmationService, MessageService, DialogService];
 const primaNgModules = [FormsModule,
@@ -32,11 +36,13 @@ const primaNgModules = [FormsModule,
   InputTextModule,
   DropdownModule,
   RatingModule,
+  RippleModule,
   ButtonModule,
   ReactiveFormsModule,
   ToastModule, AutoCompleteModule, CalendarModule, PasswordModule, ImageModule,
   GalleriaModule,
-  CarouselModule, CardModule, ProgressSpinnerModule, TableModule, DialogModule, ProgressBarModule];
+  CarouselModule, CardModule, ProgressSpinnerModule, TableModule, DialogModule, ProgressBarModule, SplitButtonModule,
+  ToggleButtonModule, AnimateOnScrollModule];
 
 @NgModule({
   imports: [
