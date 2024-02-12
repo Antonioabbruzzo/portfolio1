@@ -91,9 +91,7 @@ em:hover{
 margin-left: -450px;
 }
 
-#allMobile{
-  display: none;
-}
+
 @media screen and (max-width: 1640px) {
 
   #titolo {
@@ -187,38 +185,49 @@ margin-left: -450px;
 }
 
 
-// @media screen and (max-width: 500px) {
+@media screen and (max-width: 500px) {
 
-//   #titolo {
-//     height: 150px;
-//     font-size: 7rem;
-//   }
-//   #dev {
-//     height: 100px;
-//     font-size: 9.5rem;
-//   }
-//   #description {
-//     width: 900px;
+  #titolo {
+    height: 150px;
+    font-size: 5rem;
+  }
+  #dev {
+    height: 100px;
+    font-size: 8rem;
+  }
+  #description {
+    width: 900px;
 
-//     position: absolute;
-//     top: 490px;
-//     right: 900px;
+    position: absolute;
+    top: 490px;
+    right: 900px;
 
-//     font-size: 1.5rem;
-//   }
-//   #titolo:hover{
-//     transition: all 500ms;
-//     color: rgba(255, 166, 0, 0.544);
-//   }
+    font-size: 1.5rem;
+  }
+  #titolo:hover{
+    transition: all 500ms;
+    color: rgba(255, 166, 0, 0.544);
+  }
 
-
+#skills{
+  font-size: 4rem;
  
+  font-weight: bold;
+  width:50rem;
+}
 
+  #me{
+    width: auto;
+    font-size: 70px;
+    color: rgba(255, 166, 0, 0.544);
+  }
 
-//   #me{
-//     width: auto;
-//     font-size: 70px;
-//     color: rgba(255, 166, 0, 0.544);
-//   }
-
-// }
+  #pDescription{
+    font-size: 2rem;
+    width: 200vw;
+  }
+  h1{
+    font-size: 3rem;
+  }
+  
+}
