@@ -3,14 +3,14 @@ p{
 }
 
 .card:last-child {
-  margin-bottom: 27px;
+  margin-bottom: 29px;
 }
-
 #titolo{
   width: auto;
   font-size: 270px;
   height: 500px;
 }
+
 #dev{
   width: auto;
   font-size: 200px;
@@ -57,42 +57,14 @@ em:hover{
 
 
 
-
-
-
-
-
-@media screen and (max-width: 1240px) {
-  /* Add responsive styles for smaller screens */
-  #titolo {
-    height: 150px;
-    font-size: 7rem;
-  }
-  #dev {
-    height: 100px;
-    font-size: 9.5rem;
-  }
-  #description {
-    width: 900px;
-
-    position: absolute;
-    top: 490px;
-    right: 900px;
-
-    font-size: 1.5rem;
-  }
-  span:hover{
-    transition: all 500ms;
-    color: rgba(255, 166, 0, 0.544);
-  }
-
-}
 @media screen and (max-width: 1640px) {
-  /* Add responsive styles for smaller screens */
+
   #titolo {
     height: 150px;
     font-size: 7rem;
   }
+
+
   #dev {
     height: 100px;
 
@@ -121,8 +93,9 @@ em:hover{
   .secondPage{
    
     position: relative;
-    top: 300px;
-    left: 250px;
+    left: 9px;
+    top: 360px;
+    
   }
 
   #second{
@@ -133,8 +106,38 @@ em:hover{
 
 }
 
-@media screen and (max-width: 768px) {
-  /* Add responsive styles for smaller screens */
+
+
+
+@media screen and (max-width: 1240px) {
+
+  #titolo {
+    height: 150px;
+    font-size: 9rem;
+  }
+  #dev {
+    height: 100px;
+    font-size: 9.5rem;
+  }
+  #description {
+    width: 900px;
+
+    position: absolute;
+    top: 490px;
+    right: 900px;
+
+    font-size: 1.5rem;
+  }
+  span:hover{
+    transition: all 500ms;
+    color: rgba(255, 166, 0, 0.544);
+  }
+
+}
+
+
+@media screen and (max-width: 500px) {
+
   #titolo {
     height: 150px;
     font-size: 7rem;
@@ -160,5 +163,19 @@ em:hover{
   #cardOne{
     width: 250px;
   }
+  #skills{
+    width: 600px;
+    position: relative;
+    right: 164px;
+  }
+  .secondPage{
+   
+    position: relative;
+    left: 275px;
+    top: 360px;
+    
+  }
+
+  
 
 }
