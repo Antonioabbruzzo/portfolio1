@@ -42,7 +42,7 @@ export class DetailComponent {
     this.apiService.getDettagli(this.idDettaglio).subscribe({
       next: (value: any) => {
         this.responseFromApi = value;
-        console.log(this.responseFromApi, 'response from api');
+
       }
     });
     setTimeout(() => {

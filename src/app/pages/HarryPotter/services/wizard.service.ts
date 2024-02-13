@@ -12,7 +12,7 @@ export class WizardService {
 
   takeId(id: string) {
     this.Ids.push(id);
-    console.log(this.Ids);
+
 
     return this.Ids[0];
   }

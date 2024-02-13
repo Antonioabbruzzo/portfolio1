@@ -18,7 +18,7 @@ export class EpisodeDetailComponent implements OnInit {
 
   constructor(private animeService: AnimeService, public config: DynamicDialogConfig,
     public ref: DynamicDialogRef,) {
-    console.log(this.episodeId);
+
 
   }
   ngOnInit(): void {

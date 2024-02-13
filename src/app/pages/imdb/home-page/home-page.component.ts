@@ -60,7 +60,7 @@ export class HomePageComponent implements OnInit {
       if (this.responseFromApi) {
         this.films = this.responseFromApi.description;
         this.onFilter(); // Chiamata automatica alla funzione di filtro al termine della ricerca API
-        console.log(this.films, '**film filtrati per nome, contenuti in films');
+
         this.show = !this.show;
       }
     }, 1000);
@@ -78,7 +78,7 @@ export class HomePageComponent implements OnInit {
         film['#TITLE'].toLowerCase().includes(this.searchQuery.toLowerCase()),
 
       );
-      console.log(this.searchQuery);
+
 
     } else {
       this.filteredFilms = [...this.films];

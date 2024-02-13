@@ -38,7 +38,7 @@ export class WizardDetailComponent {
 
   getId(id: string) {
     this.idWizard = this.maghi.takeId(id);
-    console.log(id);
+
   }
 
 
@@ -50,15 +50,15 @@ export class WizardDetailComponent {
   getDetails() {
     this.apiServices.getSingleWizard(this.idWizard).subscribe({
       next: (value: any) => {
-        this.wizards = value,
-          console.log(this.wizards);
+        this.wizards = value;
+
       }
     });
   }
 
   getidPotion(id: string) {
     this.maghi.takeId(id);
-    console.log(id, '**dal componente');
+
 
   }
 }

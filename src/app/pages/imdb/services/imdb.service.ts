@@ -14,7 +14,7 @@ export class ImdbService {
 
   addFilm(titolo: any) {
     this.film.push(titolo);
-    console.log(this.film);
+
     return this.film;
   }
 

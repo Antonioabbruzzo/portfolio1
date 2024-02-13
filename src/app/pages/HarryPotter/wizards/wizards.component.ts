@@ -44,15 +44,14 @@ export class WizardsComponent {
 
   goTo(id: string) {
     this.router.navigate(['harrypotter/detail', id]);
-    console.log(id);
+
 
   }
 
   getwizard() {
     this.apiService.getWizards().subscribe({
       next: (value: any) => {
-        this.wizards = value,
-          console.log(this.wizards);
+        this.wizards = value;
       }
     });
   }
@@ -60,19 +59,19 @@ export class WizardsComponent {
   visible: boolean = false;
 
   showDialog() {
-    console.log('ciao');
+
 
     this.visible = true;
   }
 
 
   getPotion(id: string) {
-    console.log(id);
+
 
     this.apiService.getIngredients(id).subscribe({
       next: (value: any) => {
         this.potions = value;
-        console.log(this.potions);
+
 
       }
     });

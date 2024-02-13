@@ -68,7 +68,7 @@ export class LibraryComponent implements OnInit, OnDestroy {
     }
   }
   showDialog() {
-    console.log('ciao');
+
 
     this.visible = true;
   }

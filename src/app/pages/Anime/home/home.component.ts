@@ -17,12 +17,12 @@ export class HomeComponent {
   constructor(private animeService: AnimeService, private router: Router) { }
 
   searchAnime() {
-    console.log(this.search);
+
     this.home = !this.home;
-    console.log(this.home);
+
     this.animeService.getAnime(this.search).subscribe((res) => {
       this.animeList = res;
-      console.log(this.animeList);
+
     });
   }
 
