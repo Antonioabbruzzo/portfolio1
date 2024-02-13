@@ -86,7 +86,11 @@ export class LibraryComponent implements OnInit, OnDestroy {
 
   }
 
+
+
   backToHome() {
-    this.router.navigate(['home']);
+    this.router.navigate(['libreria']);
   }
+
+
 }

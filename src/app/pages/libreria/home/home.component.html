@@ -1,7 +1,7 @@
 <!-- app-book-list.component.html -->
 <h1>WELCOME IN THIS LOW-COST SCHOOL</h1>
 
-<button (click)="goToLibrary()"></button>
+<button pButton pRipple type="button" label="Go to library" (click)="goToLibrary()"></button>
 <div class="flex flex-wrap gap-3">
   <div *ngFor="let book of books; let i=index" class="p-col-12 p-md-4">
     <div>
