@@ -94,6 +94,64 @@ em:hover{
 margin-left: -450px;
 }
 
+@media screen and (max-width: 1920px) {
+
+  #titolo {
+    height: 150px;
+    font-size: 9rem;
+  }
+  .prova{
+    height: 100vh;
+    position: relative;
+    left: 459px;
+  }
+
+  #dev {
+    height: 100px;
+
+    font-size: 9.5rem;
+
+    position: relative;
+    left: 0;
+    top: 20px;
+  }
+  #description {
+    width: 900px;
+
+    position: absolute;
+    top: 610px;
+    right: 900px;
+
+    font-size: 1.5rem;
+  }
+  span:hover{
+    transition: all 500ms;
+    color: rgba(255, 166, 0, 0.544);
+  }
+
+  em{
+    color: rgba(255, 166, 0, 0.544);
+  }
+
+  .secondPage{
+   
+    position: relative;
+    left: 9px;
+   
+    
+  }
+
+  #second{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #allMobile{
+    display: none;
+  }
+
+}
 
 @media screen and (max-width: 1640px) {
 
