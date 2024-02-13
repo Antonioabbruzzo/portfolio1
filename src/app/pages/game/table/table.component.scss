@@ -3,7 +3,7 @@
   display: grid;
   grid-template-columns: repeat(4, 60px); /* Aumenta il numero di colonne e la larghezza delle celle */
   grid-gap: 93px; /* Aumenta la spaziatura tra le celle */
-  background-color: #f0f0f0; /* Colore di sfondo del gioco */
+  background-color: #000000; /* Colore di sfondo del gioco */
   padding: 20px;
   border-radius: 10px;
   justify-content: center;
@@ -19,15 +19,12 @@
   justify-content: center;
   font-size: 18px;
   font-weight: bold;
-  border: 2px solid #ccc; /* Bordo della cella */
+  border: 2px solid #ffffff; /* Bordo della cella */
   cursor: pointer;
   transition: background-color 0.3s ease-in-out;
 }
 
-.cell:hover {
-  background-color: #e0e0e0;
-  border: 1px solid black; /* Cambia colore al passaggio del mouse */
-}
+
 
 /* Stile del messaggio di vittoria/pareggio */
 .winner {
