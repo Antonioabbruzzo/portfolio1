@@ -58,7 +58,7 @@ export class AnimeDetailComponent {
     };
     console.log(data);
 
-    const ref: DynamicDialogRef = this.dialogService.open(EpisodeDetailComponent, { header: 'Episode detail', data });
+    const ref: DynamicDialogRef = this.dialogService.open(EpisodeDetailComponent, { header: 'Episode detail', data, width: '90%' });
   }
 
 
