@@ -46,7 +46,7 @@
 </div>
 
 
-<div class="flex flex-column col-12 ">
+<div class="flex flex-column col-12  " style="height: 200vh;">
   <div class="p-col-12 mb-4 text-center" id="skills">Let's talk about skills.</div>
 
   <section pAnimateOnScroll enterClass="fadeinleft" leaveClass="fadeout"
@@ -119,4 +119,9 @@
         visually appealing web pages.</p>
     </div>
   </section>
+</div>
+
+<div>
+
+  <pdf-viewer [src]="cvSource" [render-text]="true" style="display: block;  min-height: 100vh"></pdf-viewer>
 </div>

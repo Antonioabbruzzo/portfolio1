@@ -29,6 +29,7 @@
         "@fullcalendar/timegrid": "^6.0.3",
         "aos": "^2.3.4",
         "chart.js": "^3.3.2",
+        "ng2-pdf-viewer": "^10.0.0",
         "primeflex": "^3.3.1",
         "primeicons": "6.0.1",
         "primeng": "17.2.0",
