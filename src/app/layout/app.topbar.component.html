@@ -12,19 +12,18 @@
         (click)="layoutService.showProfileSidebar()">
         <i class="pi pi-ellipsis-v"></i>
     </button>
-    <!-- 
-    <div #topbarmenu class="layout-topbar-menu" [ngClass]="{'layout-topbar-menu-mobile-active': layoutService.state.profileSidebarVisible}">
-        <button class="p-link layout-topbar-button">
-            <i class="pi pi-calendar"></i>
-            <span>Calendar</span>
-        </button>
-         <button class="p-link layout-topbar-button">
-            <i class="pi pi-user"></i>
-            <span>Profile</span>
-        </button> -->
-    <!-- <button class="p-link layout-topbar-button" [routerLink]="'/documentation'">
-            <i class="pi pi-cog"></i>
-            <span>Settings</span>
-        </button> -->
 
-</div>
+    <div #topbarmenu class="layout-topbar-menu"
+        [ngClass]="{'layout-topbar-menu-mobile-active': layoutService.state.profileSidebarVisible}">
+        <div>
+            <p-dropdown [options]="languages" optionLabel="label" [showClear]=" false"
+                (onChange)="changeLanguage($event)">
+
+                <ng-template let-item pTemplate="selectedItem">
+                    <img [src]="item?.flag" alt="" style="width: 30px; height: 30px;">
+                    {{item?.label}}
+                </ng-template>
+            </p-dropdown>
+        </div>
+
+    </div>

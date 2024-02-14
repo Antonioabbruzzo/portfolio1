@@ -26,7 +26,10 @@ import { RippleModule } from 'primeng/ripple';
 import { SplitButtonModule } from 'primeng/splitbutton';
 import { ToggleButtonModule } from 'primeng/togglebutton';
 import { AnimateOnScrollModule } from 'primeng/animateonscroll';
+import { TranslateModule } from '@ngx-translate/core';
 
+
+const MODULES = [TranslateModule];
 const SERVICES = [ConfirmationService, MessageService, DialogService];
 const primeNgModule = [FormsModule,
   DataViewModule,
@@ -41,16 +44,17 @@ const primeNgModule = [FormsModule,
   ToastModule, AutoCompleteModule, CalendarModule, PasswordModule, ImageModule,
   GalleriaModule,
   CarouselModule, CardModule, ProgressSpinnerModule, TableModule, DialogModule, ProgressBarModule, SplitButtonModule,
-  ToggleButtonModule, AnimateOnScrollModule];
+  ToggleButtonModule, AnimateOnScrollModule,];
 
 @NgModule({
   imports: [
-    CommonModule, ...primeNgModule
+    CommonModule, ...primeNgModule, ...MODULES
+
 
   ],
   providers: [...SERVICES],
   declarations: [],
-  exports: [...primeNgModule]
+  exports: [...primeNgModule, ...MODULES]
 
 })
 export class SharedModule { }

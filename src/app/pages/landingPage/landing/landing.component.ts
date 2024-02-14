@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 
+
 @Component({
   selector: 'app-landing',
   templateUrl: './landing.component.html',
@@ -9,4 +10,8 @@ import { Component } from '@angular/core';
 export class LandingComponent {
   cvSource: string = "../../../../assets/layout/landing/cv pdf.pdf";
   title: string = 'cvPdf';
+
+
+
+
 }

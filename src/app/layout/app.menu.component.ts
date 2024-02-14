@@ -37,6 +37,9 @@ export class AppMenuComponent implements OnInit {
                     { label: 'Linkedin', icon: 'pi pi-fw pi-linkedin', url: "https://www.linkedin.com/in/antonio-abbruzzo-12a99718b/", target: "_blanck" },
                     { label: 'abbruzzo.antonio95@gmail.com', icon: 'pi pi-fw pi-envelope' }
                 ]
+            },
+            {
+                label: 'Settings'
             }
             // {
             //     label: 'UI Components',
@@ -72,59 +75,59 @@ export class AppMenuComponent implements OnInit {
             //         { label: 'PrimeIcons', icon: 'pi pi-fw pi-prime', routerLink: ['/utilities/icons'] },
             //         { label: 'PrimeFlex', icon: 'pi pi-fw pi-desktop', url: ['https://www.primefaces.org/primeflex/'], target: '_blank' },
             //     ]
-            // },
-            // {
-            //     label: 'Pages',
-            //     icon: 'pi pi-fw pi-briefcase',
-            //     items: [
-            //         {
-            //             label: 'Landing',
-            //             icon: 'pi pi-fw pi-globe',
-            //             routerLink: ['/landing']
-            //         },
-            //         {
-            //             label: 'Auth',
-            //             icon: 'pi pi-fw pi-user',
-            //             items: [
-            //                 {
-            //                     label: 'Login',
-            //                     icon: 'pi pi-fw pi-sign-in',
-            //                     routerLink: ['/auth/login']
-            //                 },
-            //                 {
-            //                     label: 'Error',
-            //                     icon: 'pi pi-fw pi-times-circle',
-            //                     routerLink: ['/auth/error']
-            //                 },
-            //                 {
-            //                     label: 'Access Denied',
-            //                     icon: 'pi pi-fw pi-lock',
-            //                     routerLink: ['/auth/access']
-            //                 }
-            //             ]
-            //         },
-            //         {
-            //             label: 'Crud',
-            //             icon: 'pi pi-fw pi-pencil',
-            //             routerLink: ['/pages/crud']
-            //         },
-            //         {
-            //             label: 'Timeline',
-            //             icon: 'pi pi-fw pi-calendar',
-            //             routerLink: ['/pages/timeline']
-            //         },
-            //         {
-            //             label: 'Not Found',
-            //             icon: 'pi pi-fw pi-exclamation-circle',
-            //             routerLink: ['/notfound']
-            //         },
-            //         {
-            //             label: 'Empty',
-            //             icon: 'pi pi-fw pi-circle-off',
-            //             routerLink: ['/pages/empty']
-            //         },
-            //     ]
-            // },
+            // }
+            , {
+                label: 'Pages',
+                icon: 'pi pi-fw pi-briefcase',
+                items: [
+                    {
+                        label: 'Landing',
+                        icon: 'pi pi-fw pi-globe',
+                        routerLink: ['/landing']
+                    },
+                    {
+                        label: 'Auth',
+                        icon: 'pi pi-fw pi-user',
+                        items: [
+                            {
+                                label: 'Login',
+                                icon: 'pi pi-fw pi-sign-in',
+                                routerLink: ['/auth/login']
+                            },
+                            {
+                                label: 'Error',
+                                icon: 'pi pi-fw pi-times-circle',
+                                routerLink: ['/auth/error']
+                            },
+                            {
+                                label: 'Access Denied',
+                                icon: 'pi pi-fw pi-lock',
+                                routerLink: ['/auth/access']
+                            }
+                        ]
+                    },
+                    {
+                        label: 'Crud',
+                        icon: 'pi pi-fw pi-pencil',
+                        routerLink: ['/pages/crud']
+                    },
+                    {
+                        label: 'Timeline',
+                        icon: 'pi pi-fw pi-calendar',
+                        routerLink: ['/pages/timeline']
+                    },
+                    {
+                        label: 'Not Found',
+                        icon: 'pi pi-fw pi-exclamation-circle',
+                        routerLink: ['/notfound']
+                    },
+                    {
+                        label: 'Empty',
+                        icon: 'pi pi-fw pi-circle-off',
+                        routerLink: ['/pages/empty']
+                    },
+                ]
+            },
             // {
             //     label: 'Hierarchy',
             //     items: [
