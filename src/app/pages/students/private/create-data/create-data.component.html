@@ -1,0 +1,24 @@
+<h1 class="text-center">Hello</h1>
+
+<div class="card">
+  <form [formGroup]="compileForm" class="form-control">
+    <div>
+      <label>Inserisci il nome dello studente</label>
+      <input class="form-control" type="text" formControlName="title">
+    </div>
+    <div>
+      <label>Inserisci la descrizione dell'esame</label>
+      <input class="form-control" type="text" formControlName="description">
+    </div>
+    <div>
+      <label>Inserisci il voto dell'esame</label>
+      <input class="form-control" type="text" formControlName="vote">
+    </div>
+    <div>
+      <label>Inserisci l'id</label>
+      <input class="form-control" type="text" formControlName="id">
+    </div>
+    <button class="btn btn-primary" (click)="addSingleData()">Invia il dato </button>
+  </form>
+  <app-list></app-list>
+</div>

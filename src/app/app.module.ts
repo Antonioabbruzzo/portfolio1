@@ -14,6 +14,8 @@ import { PhotoService } from './demo/service/photo.service';
 import { HttpClient } from '@angular/common/http';
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { StoreModule } from '@ngrx/store';
+import { userReducer } from './pages/students/core/user.reducer';
 
 export function HttpLoaderFactory(http: HttpClient) {
     return new TranslateHttpLoader(http);
@@ -31,6 +33,7 @@ export function HttpLoaderFactory(http: HttpClient) {
                 deps: [HttpClient],
             }
         }),
+        StoreModule.forRoot({ app: userReducer })
     ],
     providers: [
         { provide: LocationStrategy, useClass: PathLocationStrategy },

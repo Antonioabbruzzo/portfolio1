@@ -20,7 +20,8 @@ import { AppLayoutComponent } from "./layout/app.layout.component";
                     { path: 'harrypotter', loadChildren: () => import('../app/pages/HarryPotter/harry-potter.module').then(m => m.HarryPotterModule) },
                     { path: 'anime', loadChildren: () => import('../app/pages/Anime/anime.module').then(m => m.AnimeModule) },
                     { path: 'libreria', loadChildren: () => import('../app/pages/libreria/libreria.module').then(m => m.LibreriaModule) },
-                    { path: 'game', loadChildren: () => import('../app/pages/game/game.module').then(m => m.GameModule) }
+                    { path: 'game', loadChildren: () => import('../app/pages/game/game.module').then(m => m.GameModule) },
+                    { path: 'crea', loadChildren: () => import('../app/pages/students/student.module').then(m => m.StudentModule) }
                 ]
             },
 

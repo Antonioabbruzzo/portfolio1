@@ -1,0 +1,24 @@
+<div *ngFor="let student of students$ | async; let i = index">
+  <div class="card">
+    <p>{{student.name}}</p>
+    <p>{{student.id}}</p>
+    <p>{{student.description}}</p>
+    <p>{{student.vote}}</p>
+  </div>
+  <button (click)="edit(i)" class="btn btn-primary">Edit</button>
+  <button (click)="deleteStud(student.id)" class="btn btn-primary">delete</button>
+  <div *ngIf="student.showEdit===true">
+
+
+    <div>
+      <form [formGroup]="editForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" formControlName="name" />
+
+        <label for="description">Description:</label>
+        <input type="text" id="description" formControlName="description" />
+
+        <button type="button" [disabled]="!editForm.valid" (click)="editStudent(i)">Save Changes</button>
+      </form>
+    </div>
+  </div>

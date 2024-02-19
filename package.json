@@ -27,6 +27,7 @@
         "@fullcalendar/daygrid": "^6.0.3",
         "@fullcalendar/interaction": "^6.0.3",
         "@fullcalendar/timegrid": "^6.0.3",
+        "@ngrx/store": "^17.1.0",
         "@ngx-translate/core": "^15.0.0",
         "@ngx-translate/http-loader": "^8.0.0",
         "aos": "^2.3.4",
