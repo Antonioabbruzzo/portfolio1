@@ -15,6 +15,7 @@
 
     <div #topbarmenu class="layout-topbar-menu"
         [ngClass]="{'layout-topbar-menu-mobile-active': layoutService.state.profileSidebarVisible}">
+
         <div>
             <p-dropdown [options]="languages" optionLabel="label" [showClear]=" false"
                 (onChange)="changeLanguage($event)">
@@ -27,3 +28,4 @@
         </div>
 
     </div>
+</div>

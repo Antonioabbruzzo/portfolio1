@@ -2,7 +2,7 @@ import { Component, ElementRef, ViewChild } from '@angular/core';
 import { MenuItem } from 'primeng/api';
 import { LayoutService } from "./service/app.layout.service";
 import { TranslateService } from '@ngx-translate/core';
-import { LogarithmicScale } from 'chart.js';
+
 
 @Component({
     selector: 'app-topbar',
@@ -34,4 +34,6 @@ export class AppTopBarComponent {
 
         this.translate.use(selectedLanguage);
     }
+
+
 }

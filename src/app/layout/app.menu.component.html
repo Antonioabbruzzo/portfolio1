@@ -4,5 +4,13 @@
         <li *ngIf="item.separator" class="menu-separator"></li>
     </ng-container>
 
+    <button class="p-link h-3rem w-2rem" (click)="changeTheme('mdc-dark-deeppurple', 'dark')"
+        [ngClass]="{ active: colorScheme === 'dark' }">
+        <i class="pi pi-moon"></i>
+    </button>
 
+    <button class="p-link h-3rem w-2rem" (click)="changeTheme('mdc-light-deeppurple', 'light')"
+        [ngClass]="{ active: colorScheme === 'light' }">
+        <i class="pi pi-sun"></i>
+    </button>
 </ul>
