@@ -13,24 +13,26 @@ import { Store } from '@ngrx/store';
   styleUrls: ['./create-data.component.scss']
 })
 export class CreateDataComponent {
-  data: IModel[] = [];
+
   singleData: IModel = {
     name: '',
     description: '',
     id: 0,
     showEdit: false,
-    vote: 0
+    vote: 0,
+    cfu: 0
   };
 
   constructor(private manage: ManageService) {
-    this.data = this.manage.dataCollection;
+
   }
 
   compileForm: FormGroup = new FormGroup({
     title: new FormControl(''),
     description: new FormControl(''),
     id: new FormControl(''),
-    vote: new FormControl('')
+    vote: new FormControl(''),
+    cfu: new FormControl('')
   });
 
   addSingleData() {
@@ -40,10 +42,11 @@ export class CreateDataComponent {
       description: this.compileForm.get('description')?.value || '',
       id: this.compileForm.get('id')?.value || 0,
       showEdit: false,
-      vote: this.compileForm.get('vote')?.value || 0
+      vote: this.compileForm.get('vote')?.value || 0,
+      cfu: this.compileForm.get('cfu')?.value || 0,
     };
 
-    // Chiama il metodo del servizio per aggiungere lo studente allo store
+
     this.manage.addData(newStudent);
 
   }

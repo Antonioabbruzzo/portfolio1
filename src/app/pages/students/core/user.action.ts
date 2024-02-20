@@ -9,7 +9,7 @@ export const addStudent = createAction(
 
 export const editStudent = createAction(
   '[Student] Edit Student',
-  props<{ updatedStudent: IModel; }>()
+  props<{ index: number; updatedStudent: IModel; }>()
 );
 
 export const deleteStudent = createAction(

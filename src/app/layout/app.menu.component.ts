@@ -29,7 +29,7 @@ export class AppMenuComponent implements OnInit {
                     { label: 'Take a break', icon: 'pi pi-fw pi-cog', routerLink: ['game'] },
                     { label: 'Anime', icon: 'pi pi-fw pi-cog', routerLink: ['anime'] },
                     { label: 'Library', icon: 'pi pi-fw pi-cog', routerLink: ['libreria'] },
-                    { label: 'Student', icon: 'pi pi-fw pi-cog', routerLink: ['crea'] },
+                    { label: 'Your university career.', icon: 'pi pi-fw pi-cog', routerLink: ['crea'] },
                 ]
             },
             {

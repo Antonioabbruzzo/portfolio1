@@ -4,7 +4,7 @@ import { CreateDataComponent } from './create-data/create-data.component';
 
 const routes: Routes = [
   {
-    path: 'crea',
+    path: '',
     component: CreateDataComponent
   },
 

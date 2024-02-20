@@ -26,6 +26,8 @@ export const userReducer = createReducer(
         ...updatedState[index],
         name: updatedStudent.name,
         description: updatedStudent.description,
+        vote: updatedStudent.vote,
+        cfu: updatedStudent.cfu
       };
 
       return updatedState;

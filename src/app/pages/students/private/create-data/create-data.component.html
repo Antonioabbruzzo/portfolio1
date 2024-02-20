@@ -1,24 +1,38 @@
-<h1 class="text-center">Hello</h1>
+<h1 class="text-center">Your university career.</h1>
 
-<div class="card">
-  <form [formGroup]="compileForm" class="form-control">
-    <div>
-      <label>Inserisci il nome dello studente</label>
-      <input class="form-control" type="text" formControlName="title">
+<div class="border-white">
+  <form [formGroup]="compileForm" class="field">
+    <div class="field">
+      <label>Enter the student's name</label>
+      <input
+        class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full"
+        type="text" formControlName="title">
     </div>
-    <div>
-      <label>Inserisci la descrizione dell'esame</label>
-      <input class="form-control" type="text" formControlName="description">
+    <div class="field">
+      <label>Enter the exam description</label>
+      <input
+        class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full"
+        type="text" formControlName="description">
     </div>
-    <div>
-      <label>Inserisci il voto dell'esame</label>
-      <input class="form-control" type="text" formControlName="vote">
+    <div class="field">
+      <label>Enter the exam grade</label>
+      <input
+        class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full"
+        type="number" formControlName="vote">
     </div>
-    <div>
-      <label>Inserisci l'id</label>
-      <input class="form-control" type="text" formControlName="id">
+    <div class="field">
+      <label>Enter the exam credit units (CFU)</label>
+      <input
+        class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full"
+        type="number" formControlName="cfu">
     </div>
-    <button class="btn btn-primary" (click)="addSingleData()">Invia il dato </button>
+    <div class="field">
+      <label>Enter the ID</label>
+      <input
+        class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full"
+        type="number" formControlName="id">
+    </div>
+    <button class="p-button font-bold m-1" (click)="addSingleData()">Invia il dato </button>
   </form>
   <app-list></app-list>
 </div>

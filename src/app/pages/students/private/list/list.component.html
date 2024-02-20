@@ -1,24 +1,50 @@
-<div *ngFor="let student of students$ | async; let i = index">
-  <div class="card">
-    <p>{{student.name}}</p>
-    <p>{{student.id}}</p>
-    <p>{{student.description}}</p>
-    <p>{{student.vote}}</p>
+<p class="text-center">Weighted average: {{media}}</p>
+
+<div *ngFor="let student of students ; let i = index" class="field">
+  <div
+    class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full">
+    <p class="text-2xl">Student name: {{student.name}}</p>
+    <p class="text-2xl">Exam id: {{student.id}}</p>
+    <p class="text-2xl"> Exam description: {{student.description}}</p>
+    <p class="text-2xl">Exam vote: {{student.vote}}</p>
+    <p class="text-2xl">Exam cfu: {{student.cfu}}</p>
   </div>
-  <button (click)="edit(i)" class="btn btn-primary">Edit</button>
-  <button (click)="deleteStud(student.id)" class="btn btn-primary">delete</button>
+  <div class="flex  ">
+
+    <button class="p-button font-bold m-1" (click)="edit(i)">Edit</button>
+    <button class="p-button font-bold m-1" (click)="deleteStud(student.id)">delete</button>
+  </div>
   <div *ngIf="student.showEdit===true">
 
 
-    <div>
+    <div class="field">
       <form [formGroup]="editForm">
-        <label for="name">Name:</label>
-        <input type="text" id="name" formControlName="name" />
+        <div class="field">
 
-        <label for="description">Description:</label>
-        <input type="text" id="description" formControlName="description" />
-
-        <button type="button" [disabled]="!editForm.valid" (click)="editStudent(i)">Save Changes</button>
+          <label for="name">Name:</label>
+          <input type="text" id="name" formControlName="name"
+            class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full" />
+        </div>
+        <div class="field">
+          <label for="description">Description:</label>
+          <input type="text" id="description" formControlName="description"
+            class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full" />
+        </div>
+        <div class="field">
+          <label for="description">Vote:</label>
+          <input type="text" id="description" formControlName="vote"
+            class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full" />
+        </div>
+        <div class="field">
+          <label for="description">cfu:</label>
+          <input type="number" id="description" formControlName="cfu"
+            class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full" />
+        </div>
+        <button class="p-button font-bold" type="button" [disabled]="!editForm.valid" (click)="editStudent(i)">Save
+          Changes</button>
       </form>
     </div>
+
   </div>
+
+</div>

@@ -19,8 +19,11 @@ export class ManageService {
     this.store.dispatch(addStudent({ student }));
   }
 
-  editStudent(updatedStudent: IModel): void {
-    this.store.dispatch(editStudent({ updatedStudent }));
+  editStudent(indice, updatedStudent: IModel): void {
+    this.store.dispatch(editStudent({
+      updatedStudent,
+      index: indice
+    }));
   }
 
   delete(studentId: number): void {
