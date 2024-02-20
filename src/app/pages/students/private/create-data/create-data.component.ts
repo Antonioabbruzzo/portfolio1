@@ -14,14 +14,7 @@ import { Store } from '@ngrx/store';
 })
 export class CreateDataComponent {
 
-  singleData: IModel = {
-    name: '',
-    description: '',
-    id: 0,
-    showEdit: false,
-    vote: 0,
-    cfu: 0
-  };
+
 
   constructor(private manage: ManageService) {
 
@@ -49,6 +42,10 @@ export class CreateDataComponent {
 
     this.manage.addData(newStudent);
 
+  }
+
+  reset() {
+    this.compileForm.reset();
   }
 
 }

@@ -32,7 +32,7 @@
         class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full"
         type="number" formControlName="id">
     </div>
-    <button class="p-button font-bold m-1" (click)="addSingleData()">Invia il dato </button>
+    <button class="p-button font-bold m-1" (click)="addSingleData()" (click)="reset()">Invia il dato </button>
   </form>
   <app-list></app-list>
 </div>
