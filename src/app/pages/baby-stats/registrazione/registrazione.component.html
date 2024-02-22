@@ -1,0 +1,30 @@
+<form [formGroup]="usersRegistration">
+  <div class="field col">
+    <label for="name">{{
+      "USERNAME"
+      }}</label>
+    <input pInputText id="title" formControlName="name"
+      class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full" />
+  </div>
+  <div class="field col">
+    <label for="surname">{{
+      "YOUR NAME"
+      }}</label>
+    <input pInputText id="author" formControlName="surname"
+      class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full" />
+  </div>
+  <div class="field col">
+    <label for="password">{{
+      "PASSWORD"
+      }}</label>
+    <input pInputText type="password" id="publicationYear" formControlName="password"
+      class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full" />
+  </div>
+  <div class="field col">
+    <label for="dateOfBirth">{{ "DATE OF BIRTH" }}</label>
+    <input pInputText type="date" id="synopsis" formControlName="dateOfBirth"
+      class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full" />
+  </div>
+
+  <p-button label="Registration" (click)="save()"></p-button>
+</form>
