@@ -21,7 +21,8 @@ import { AppLayoutComponent } from "./layout/app.layout.component";
                     { path: 'anime', loadChildren: () => import('../app/pages/Anime/anime.module').then(m => m.AnimeModule) },
                     { path: 'libreria', loadChildren: () => import('../app/pages/libreria/libreria.module').then(m => m.LibreriaModule) },
                     { path: 'game', loadChildren: () => import('../app/pages/game/game.module').then(m => m.GameModule) },
-                    { path: 'crea', loadChildren: () => import('../app/pages/students/student.module').then(m => m.StudentModule) }
+                    { path: 'crea', loadChildren: () => import('../app/pages/students/student.module').then(m => m.StudentModule) },
+                    { path: 'baby', loadChildren: () => import('../app/pages/baby-stats/baby.module').then(m => m.BabyModule) }
                 ]
             },
 

@@ -27,6 +27,10 @@ import { SplitButtonModule } from 'primeng/splitbutton';
 import { ToggleButtonModule } from 'primeng/togglebutton';
 import { AnimateOnScrollModule } from 'primeng/animateonscroll';
 import { TranslateModule } from '@ngx-translate/core';
+import { Divider, DividerModule } from 'primeng/divider';
+import { CheckboxModule } from 'primeng/checkbox';
+import { RadioButtonModule } from 'primeng/radiobutton';
+import { ChartModule } from 'primeng/chart';
 
 
 const MODULES = [TranslateModule];
@@ -44,7 +48,7 @@ const primeNgModule = [FormsModule,
   ToastModule, AutoCompleteModule, CalendarModule, PasswordModule, ImageModule,
   GalleriaModule,
   CarouselModule, CardModule, ProgressSpinnerModule, TableModule, DialogModule, ProgressBarModule, SplitButtonModule,
-  ToggleButtonModule, AnimateOnScrollModule,];
+  ToggleButtonModule, AnimateOnScrollModule, DividerModule, CheckboxModule, RadioButtonModule, ChartModule];
 
 @NgModule({
   imports: [

@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { BabyService } from '../services/baby.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-settings',
@@ -12,7 +13,7 @@ export class SettingsComponent {
 
   babyDescription: FormGroup;
 
-  constructor(private fb: FormBuilder, private babyService: BabyService) {
+  constructor(private fb: FormBuilder, private babyService: BabyService, private router: Router) {
     this.babyDescription = this.fb.group({
       name: ['', Validators.required],
       sex: ['', Validators.required],
@@ -22,6 +23,7 @@ export class SettingsComponent {
   }
 
   addChild() {
-    this.babyService.getBaby(this.babyDescription.value);
+    this.babyService.addBaby(this.babyDescription.value);
+    this.router.navigate(['baby/home']);
   }
 }

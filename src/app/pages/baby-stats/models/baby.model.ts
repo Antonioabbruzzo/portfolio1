@@ -1,25 +1,12 @@
+import { Meal } from "./meal.model";
+import { IPee } from "./pip.model";
+import { IPoop } from "./poop.model";
+
 export interface Weight {
   date: Date,
   weight: number,
   note: string;
 }
-export interface Meal {
-  date: Date,
-  weight: number,
-  note: string;
-}
-export interface Pee {
-  date: Date,
-  weight: number,
-  note: string;
-}
-export interface Poop {
-  date: Date,
-  weight: number,
-  note: string;
-}
-
-
 
 
 export interface IBaby {
@@ -28,6 +15,8 @@ export interface IBaby {
   born: Date;
   weigths: Weight[];
   meals: Meal[];
-  pees: Pee[];
-  poops: Poop[];
+  pees: IPee[];
+  poops: IPoop[];
 }
+
+export { Meal };

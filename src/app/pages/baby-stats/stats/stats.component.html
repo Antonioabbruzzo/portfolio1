@@ -1,1 +1,11 @@
-<p>stats works!</p>
+<div class="card" *ngFor="let item of babyInfo">
+  <p class="text-bold">
+    Baby info: {{item.name}}, born in : {{item.born}}
+  </p>
+  <p class="text-bold">
+    Baby weight: {{item.weight}}kg
+  </p>
+</div>
+<div class="card">
+  <p-chart type="line" [data]="data" [options]="options"></p-chart>
+</div>

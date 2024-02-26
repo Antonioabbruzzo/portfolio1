@@ -1,1 +1,41 @@
-<p>pipi works!</p>
+<p-button label="Home" (click)="comeBackHome()"></p-button>
+<div class="card">
+  <p-chart type="bar" [data]="basicData" [options]="basicOptions"></p-chart>
+</div>
+<div class="card">
+  <h3 class="text-center">
+    Add your baby pee description
+  </h3>
+  <form [formGroup]="peeForm">
+    <div class="field col">
+      <label for="name">{{
+        "DATE"
+        }}</label>
+      <input pInputText type="date" id="title" formControlName="date"
+        class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full" />
+    </div>
+
+    <div class="field col">
+      <label for="Born">{{
+        "WEIGHT"
+        }}</label>
+      <input pInputText type="number" id="publicationYear" formControlName="weight" class=" text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round
+        appearance-none outline-none focus:border-primary w-full" />
+    </div>
+    <div class="field col">
+      <label for="note">{{ "NOTE" }}</label>
+      <input pInputText type="text" id="synopsis" formControlName="note"
+        class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full" />
+    </div>
+
+    <p-button label="Registration" (click)="registerPee()"></p-button>
+  </form>
+</div>
+
+<div class="card">
+  <div *ngFor="let item of peeBaby" class="card">
+    <p>Date: {{item.date}}</p>
+    <p>Weight: {{item.weight}}ml</p>
+    <p>Note: {{item.note}}</p>
+  </div>
+</div>

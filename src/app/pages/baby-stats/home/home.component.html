@@ -1,8 +1,59 @@
+<div class="flex justify-content-end">
+  <div class="flex">
+
+    <i class="pi pi-spin pi-cog" style="font-size: 1rem"></i>
+    <p class="ml-1" (click)="goToSetting()">Add a baby </p>
+  </div>
+</div>
+
 <div class="card">
   <app-stats></app-stats>
-  <app-nanna></app-nanna>
-  <app-pappe></app-pappe>
-  <app-pipi></app-pipi>
-  <app-pupu></app-pupu>
+</div>
 
+<div class="card my-4">
+  <div *ngIf="!ultimaPappa">
+    <p class="card text-center" (click)="goToMeal()">No meal registered</p>
+  </div>
+  <div class="card text-center" (click)="goToMeal()" *ngIf="ultimaPappa">
+    <h5>Last meal of your baby</h5>
+    <p> Date: {{ultimaPappa.date}}</p>
+    <p> Weight: {{ultimaPappa.weight}}gr</p>
+    <p> Note: {{ultimaPappa.note}}</p>
+  </div>
+</div>
+
+<div class="card ">
+  <div *ngIf="!utimaNanna">
+    <p class="card text-center" (click)="goToNanna()">No sleep registered</p>
+  </div>
+  <div class="card text-center" (click)="goToNanna()" *ngIf="utimaNanna">
+    <h5>Last sleep of your baby</h5>
+    <p> Date: {{utimaNanna.date}}</p>
+    <p> Weight: {{utimaNanna.duration}}minute</p>
+    <p> Note: {{utimaNanna.note}}</p>
+  </div>
+</div>
+
+<div class="card">
+  <div *ngIf="!lastPee">
+    <p class="card text-center" (click)="goToPee()">No pee registered</p>
+  </div>
+  <div class="card text-center" (click)="goToPee()" *ngIf="lastPee">
+    <h5>Last pee of your baby</h5>
+    <p> Date: {{lastPee.date}}</p>
+    <p> Weight: {{lastPee.weight}}ml</p>
+    <p> Note: {{lastPee.note}}</p>
+  </div>
+</div>
+
+<div class="card">
+  <div *ngIf="!lastPoop">
+    <p class="card text-center" (click)="goToPee()">No poop registered</p>
+  </div>
+  <div class="card text-center" (click)="goToPee()" *ngIf="lastPoop">
+    <h5>Last poop of your baby</h5>
+    <p> Date: {{lastPee.date}}</p>
+    <p> Weight: {{lastPee.weight}}gr</p>
+    <p> Note: {{lastPee.note}}</p>
+  </div>
 </div>
