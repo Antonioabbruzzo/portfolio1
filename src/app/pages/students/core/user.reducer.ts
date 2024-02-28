@@ -14,20 +14,24 @@ export const initialState: IModel[] = [];
 
 export const userReducer = createReducer(
   initialState,
+
+
   on(UserActions.addStudent, (state, { student }) => {
     return [...state, student];
   }),
+
+
   on(UserActions.editStudent, (state, { updatedStudent }) => {
     const index = state.findIndex(student => student.id === updatedStudent.id);
-
+    const { name, description, vote, cfu } = updatedStudent;
     if (index !== -1) {
       const updatedState = [...state];
       updatedState[index] = {
         ...updatedState[index],
-        name: updatedStudent.name,
-        description: updatedStudent.description,
-        vote: updatedStudent.vote,
-        cfu: updatedStudent.cfu
+        name,
+        description,
+        vote,
+        cfu
       };
 
       return updatedState;

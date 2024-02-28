@@ -2,17 +2,18 @@
 
 <div *ngFor="let student of students ; let i = index" class="field">
   <div
-    class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full">
+    class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full"
+    *ngIf="student.showEdit===false">
     <p class="text-2xl">Student name: {{student.name}}</p>
     <p class="text-2xl">Exam id: {{student.id}}</p>
     <p class="text-2xl"> Exam description: {{student.description}}</p>
     <p class="text-2xl">Exam vote: {{student.vote}}</p>
     <p class="text-2xl">Exam cfu: {{student.cfu}}</p>
-  </div>
-  <div class="flex  ">
+    <div class="flex  ">
 
-    <button class="p-button font-bold m-1" (click)="edit(i)">Edit</button>
-    <button class="p-button font-bold m-1" (click)="deleteStud(student.id)">delete</button>
+      <button class="p-button font-bold m-1" (click)="edit(i)">Edit</button>
+      <button class="p-button font-bold m-1" (click)="deleteStud(student.id)">delete</button>
+    </div>
   </div>
   <div *ngIf="student.showEdit===true">
 
